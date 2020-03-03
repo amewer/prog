@@ -24,14 +24,16 @@
             android:layout_width="96dp"
             android:layout_height="31dp"
             android:text="TextView"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/nouvelleCouleur"/>
 
 
         <TextView
             android:id="@+id/Lanceur"
             android:layout_width="96dp"
             android:layout_height="31dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/noir"/>
 
 
     </TableLayout>

@@ -5,4 +5,14 @@
     <string name="tab_text_2">Validées</string>
     <string name="membres_inscrits">Membres inscrits</string>
     <string name="s_inscrire">S\'inscrire</string>
+    <string name="Identifiant">Identifiant</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="s_inscrire2">S\'inscrire</string>
+    <string name="webuy">WeBuy!</string>
+    <string name="mes_offres">Mes offres</string>
+    <string name="param_tres">Paramètres</string>
+    <string name="magasins">Magasins</string>
+    <string name="messages">Messages</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="a_vous_les_grandes_promos">A vous les grandes promos !</string>
 </resources>

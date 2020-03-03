@@ -6,7 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="left"
     android:orientation="horizontal"
-    android:weightSum="2">
+    android:weightSum="2"
+
+    >
 
 
     <ImageView
@@ -16,63 +18,76 @@
         app:srcCompat="@mipmap/ic_settings" />
 
 
-
     <TextView
         android:id="@+id/description"
-        android:layout_width="391dp"
-        android:layout_height="176dp"
+        android:layout_width="wrap_content"
+        android:layout_height="177dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="173dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/titreArticle"
-        android:layout_width="237dp"
-        android:layout_height="97dp"
+        android:layout_width="218dp"
+        android:layout_height="93dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="7dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:textSize="30sp" />
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:textColor="@color/nouvelleCouleur"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/lanceur"
-        android:layout_width="wrap_content"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:textColor="@color/noir"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/membresInscrits"
+        android:layout_width="369dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginLeft="158dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/membresInscrits"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
         android:layout_marginTop="372dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
         android:text="@string/membres_inscrits"
-        android:textSize="24sp" />
+        android:textColor="@color/nouvelleCouleur"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listMembresInscrits"
@@ -85,23 +100,39 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="159dp"
-        android:layout_height="58dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/listMembresInscrits"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="125dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="633dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginRight="127dp"
-        android:text="@string/s_inscrire" />
+
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#4DC5DA"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:id="@+id/ButtonSinscrire"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/connexionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/s_inscrire"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

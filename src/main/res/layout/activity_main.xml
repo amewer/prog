@@ -4,119 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3399FF"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/messages"
-        android:layout_width="126dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/settings"
-        app:layout_constraintStart_toEndOf="@+id/magasins"
-        app:layout_constraintTop_toBottomOf="@+id/titreArticle"
-        app:srcCompat="@mipmap/ic_msg" />
 
-    <ImageView
-        android:id="@+id/magasins"
-        android:layout_width="126dp"
-        android:layout_height="135dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/offres"
-        app:layout_constraintEnd_toStartOf="@+id/messages"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titreArticle"
-        app:srcCompat="@mipmap/ic_store" />
-
-    <ImageView
-        android:id="@+id/offres"
-        android:layout_width="126dp"
-        android:layout_height="135dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messages"
-        app:srcCompat="@mipmap/ic_offers" />
-
-    <ImageView
-        android:id="@+id/settings"
-        android:layout_width="126dp"
-        android:layout_height="135dp"
-        app:layout_constraintStart_toEndOf="@+id/offres"
-        app:layout_constraintTop_toBottomOf="@+id/messages"
-        app:srcCompat="@mipmap/ic_settings" />
-
-    <TextView
-        android:id="@+id/titreArticle"
-        android:layout_width="134dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="112dp"
-        android:text="WeBuy!"
-        android:textColor="#FF3366"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Lanceur"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="Se connecter"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/offres"
-        android:textColor="#FFFFFF"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView3"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="136dp"
+            android:layout_height="132dp"
+            app:srcCompat="@drawable/logo3" />
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titreArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="74dp"
+                android:gravity="bottom"
+                android:text="@string/webuy"
+                android:textColor="@color/nouvelleCouleur"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="@string/a_vous_les_grandes_promos"
+                android:textColor="#FFFFFF" />
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Magasins"
-        app:layout_constraintBottom_toTopOf="@+id/offres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.324"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="#FFFFFF"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/messages"
+            android:layout_width="126dp"
+            android:layout_height="135dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintVertical_bias="0.817"
+            app:srcCompat="@mipmap/ic_msg" />
+
+        <ImageView
+            android:id="@+id/magasins"
+            android:layout_width="126dp"
+            android:layout_height="135dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginRight="25dp"
+            app:srcCompat="@mipmap/ic_store" />
+
+        <ImageView
+            android:id="@+id/offres"
+            android:layout_width="126dp"
+            android:layout_height="135dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            app:srcCompat="@mipmap/ic_offers"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="126dp"
+            android:layout_height="135dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@mipmap/ic_settings"
+            tools:layout_editor_absoluteX="238dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="25dp"
+            android:gravity="center_horizontal"
+            android:text="@string/magasins"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:text="@string/messages"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="25dp"
+            android:text="@string/mes_offres"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:text="@string/param_tres"
+            android:textColor="#FFFFFF" />
+
+
+    </GridLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/connexion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Messages"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/offres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="Mes offres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.331"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/se_connecter"
+        android:textColor="@color/nouvelleCouleur"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/magasins"
-        android:textColor="#FFFFFF"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="Paramètres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.698"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messages"
-        android:textColor="#FFFFFF"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

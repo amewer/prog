@@ -33,8 +33,8 @@ public class UneOffre extends AppCompatActivity {
         titreArticle=findViewById(R.id.titreArticle);
 
         String membre ="nouveauMembre";
-        description.setText("bfurrravhhbfruiheuerifhurhuf");
-        titreArticle.setText("nouvelle offre!!!!!");
+        description.setText("Prix hors promo: 8$\nPrix promo : 6$");
+        titreArticle.setText("Nouvelle Offre 12*1L");
         lancePromo.setText("Lancé par : "+membre);
 
 
